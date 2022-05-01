@@ -7,9 +7,15 @@
     <script>
       function solution(s) {
         let answer = 'YES'
+        s = s.toLowerCase()
+        console.log(s.split('').reverse().join(''))
+        if (s.split(' ').reverse().join('') !== s) {
+          answer = 'No'
+        }
+        return answer
       }
 
-      let str = 'found7, time: study; Yduts; emit, 7Dnuof'
+      let str = 'good'
       console.log(solution(str))
     </script>
   </body>

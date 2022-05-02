@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = ''
+        let cnt = 1
+        // 문자열을 돌면서
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] === s[i + 1]) {
+            cnt++
+          } else {
+            if (cnt > 1) {
+              answer += s[i]
+              answer += cnt
+              cnt = 1
+            } else {
+              answer += s[i]
+            }
+          }
+        }
+
+        return answer
+      }
+      let str = 'KKHSSSSSSSE'
+      console.log(solution(str))
+    </script>
+  </body>
+</html>

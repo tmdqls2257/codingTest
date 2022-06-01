@@ -13,6 +13,24 @@
       }
       let str = 'found7, time: study; Yduts; emit, 7Dnuof'
       console.log(solution(str))
+
+      function isPalindrome(x) {
+        let rem,
+          number = x,
+          temp = number,
+          final = 0
+
+        while (number > 0) {
+          rem = number % 10
+          number = parseInt(number / 10)
+          final = final * 10 + rem
+        }
+        if (final === temp) {
+          return true
+        } else {
+          return false
+        }
+      }
     </script>
   </body>
 </html>
